@@ -1,0 +1,6 @@
+.it{
+  transition: transform .2s ;  
+}
+.it:hover{
+    transform: scale(1.5);
+}

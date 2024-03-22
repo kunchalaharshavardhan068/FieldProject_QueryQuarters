@@ -1,0 +1,107 @@
+//USER API REQUESTS
+#reading the articles
+GET http://localhost:4000/user-api/articles/
+####
+#posting the user details
+POST http://localhost:4000/user-api/user
+Content-Type: application/json
+
+
+{
+    "usertype":"user",
+    "username":"rafi",
+    "password":"rafi",
+    "email":"rafi@gmail"
+
+}
+####
+//login of the user
+POST http://localhost:4000/user-api/login
+Content-Type: application/json
+
+{
+    "usertype":"user",
+    "username":"rafi",
+    "password":"rafi"
+}
+####
+//author posting the comments
+POST http://localhost:4000/user-api/comment/1709053586
+Content-Type: application/json
+
+{
+    "username":"rafi",
+    "comment":"The article is amazing"
+}
+// AUTHOR API REQUESTS
+#### //author reading articles
+GET http://localhost:4000/author-api/articles/william
+#### author registration 
+POST http://localhost:4000/author-api/author
+Content-Type: application/json
+
+{
+    "usertype":"author",
+    "username":"shakesphere",
+    "password":"shakesphere",
+    "email":"shakesphere@gmail"
+}
+#### author login
+POST http://localhost:4000/author-api/login
+Content-Type: application/json
+
+{
+    "usertype":"author",
+    "username":"william",
+    "password":"william"
+}
+####
+POST http://localhost:4000/author-api/article/
+Content-Type: application/json
+
+{
+    "articleid":"{{$timestamp}}",
+    "authorname":"william",
+    "category":"horror",
+    "title":"murder of witch",
+    "content":"the Wicked Witch of the West tricks Dorothy and snatches one of Dorothy’s silver shoes. Angry, Dorothy throws water on her, which causes the Witch to melt. The companions’ secondary quest to kill the Wicked Witch of the West forms a miniature plot-within-a-plot with its own rising action and climax.",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "comments":[],
+    "status":true
+}
+####
+PUT http://localhost:4000/author-api/article
+Content-Type: application/json
+
+{
+    "articleid":"1709053586",
+    "authorname":"william",
+    "category":"moral",
+    "title":"rich dad poor dad",
+    "content":"the Wicked Witch of the West tricks Dorothy and snatches one of Dorothy’s silver shoes. Angry, Dorothy throws water on her, which causes the Witch to melt. The companions’ secondary quest to kill the Wicked Witch of the West forms a miniature plot-within-a-plot with its own rising action and climax.",
+    "dateOfCreation":"2024-02-26T16:31:04.702Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "comments":[],
+    "status":true
+
+}
+####
+put http://localhost:4000/author-api/article/1709053586
+Content-Type: application/json
+
+
+{
+    "articleid":"1709053586",
+    "authorname":"william",
+    "category":"moral",
+    "title":"rich dad poor dad",
+    "content":"the Wicked Witch of the West tricks Dorothy and snatches one of Dorothy’s silver shoes. Angry, Dorothy throws water on her, which causes the Witch to melt. The companions’ secondary quest to kill the Wicked Witch of the West forms a miniature plot-within-a-plot with its own rising action and climax.",
+    "dateOfCreation":"2024-02-26T16:31:04.702Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "comments":[],
+    "status":true
+
+}
+####
+GET http://localhost:4000/admin-api/test-admin/
