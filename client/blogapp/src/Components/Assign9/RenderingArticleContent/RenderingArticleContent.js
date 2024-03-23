@@ -121,6 +121,14 @@ function RenderingArticleContent() {
         </div></>:
         <center>
         <form onSubmit={handleSubmit(setSave)} >
+        <label htmlFor='genere' >Genere</label>
+                <select id='genere' className='form-select' {...register("genere")} >
+                  <option value="comedy" >Comedy</option>
+                  <option value="action" >Action</option>
+                  <option value="romance" >Romance</option>
+                  <option value="adventure" >Adventure</option>
+                  <option value="animation" >Animation</option>
+                </select>            
           <label htmlFor='title' className='form-label'  >Title</label>
           <input id='title' type='text' defaultValue={state.title} className='form-check form-control ' {...register("title")} ></input>
           <label htmlFor='category' className='form-label'  >Category</label>
