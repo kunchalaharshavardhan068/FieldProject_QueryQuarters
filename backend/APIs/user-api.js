@@ -93,5 +93,15 @@
         res.send({message:"Following"})
     }))
 
+    //making genere request
+    userApp.post('/articlesbygenere',verifyToken,asyncerrorhandler(async (req,res)=>{
+        const articles = req.app.get("articlescollection")
+        const obj = req.body;
+        // console.log(obj);
+       const output =await articles.find({genere:obj.genere}).toArray();
+    //    console.log(output);
+       res.send({message:"Article by Genere",payload:output})
+    }))
+
     module.exports=userApp
     

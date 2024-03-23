@@ -1,9 +1,18 @@
-li{
-    /* padding: 5px; */
-    margin: 9px;
-    list-style: none;
+.nav{
+    --bs-nav-link-color:#f5ca54;
+}
+.bgcHeader{
+    background-color: #041a3d !important;
+}
+
+.navComponenth{
+    color: #f5ca54 !important;
+}
+.navComponenth:hover{
+    color: rgb(246, 170, 18) !important;
 }
 .active{
-color: white !important;
-font-size: large;
+    color: rgb(247, 245, 241) !important;
+    
+    border-bottom:1px solid #f5ca54 !important;
 }

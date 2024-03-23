@@ -31,7 +31,13 @@ function App() {
     },
     {
     path: '/userprofile',
-    element:<ProfileOfUser/>
+    element:<ProfileOfUser/>,
+    children:[
+      {
+        path:'',
+        element:<Articles/>
+      }
+    ]
   },
       {
         path:'/articles',

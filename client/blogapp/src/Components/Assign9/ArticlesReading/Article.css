@@ -1,6 +1,33 @@
-.it{
-  transition: transform .2s ;  
+.containerArticlecss {
+  background-color: #f0f0f0;
+  padding: 20px;
 }
-.it:hover{
-    transform: scale(1.5);
+
+.card {
+  border: 1px solid #213555;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-weight: bold;
+  color: #213555;
+}
+
+.card-text {
+  color: #4f709c;
+}
+
+.text-muted {
+  color: #e5d283;
+}
+
+.eacharticle {
+  margin-bottom: 20px;
 }

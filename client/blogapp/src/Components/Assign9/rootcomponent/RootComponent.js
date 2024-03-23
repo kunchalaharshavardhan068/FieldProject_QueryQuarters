@@ -8,7 +8,8 @@ function RootComponent() {
   return (
     <div className=''>
         <Header/>
-        <div style={{minHeight : "85vh "}} className='px-5 '>
+        
+        <div style={{minHeight : "70vh "}} className='px-5 '>
         <Outlet/>
         </div>
         <Footer/>

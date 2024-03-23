@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
 import {useState} from 'react'
 import axios from 'axios'
+import './Signup.css'
 
 
 function Signup() {
@@ -51,39 +52,62 @@ async function onhandle(obj) {
 
   }
   return (
-    <div>
-      <center><form onSubmit={handleSubmit(onhandle)} className='w-50 mt-5 '>
-        <h2 className='m-4' >Registration Form</h2>
-        
-        <div className='d-flex justify-content-center border-black   ' >
-        <h5 className='mx-4' >Register as</h5>
-        <div>
-        <div className='form-check form-check-inline'>
-          <label htmlFor='user' className='form-check-label ' >User</label>
-          <input id='user' type='radio' className='form-check-input' value="user" {...register("usertype", { disabled: state })} />
+    <div className='background ' >
+      <div className="container d-flex justify-content-center align-items-center vh-100">
+      <div className="card rounded-2  p-4 w-50 bg-body-secondary loginCard">
+        <p className='fs-3 text-primary mb-4'>SignUp</p>
+        <form onSubmit={handleSubmit(onhandle)}>
+          <div className="mb-4">
+            <label htmlFor="user" className="form-check-label me-3" style={{ fontSize: "1.2rem", color: "var(--light-dark-grey)" }}>
+              Register as
+            </label>
+            <br></br>
+            <br />
+            <div className="form-check form-check-inline">
+              <input
+                type="radio"
+                className="form-check-input"
+                id="author"
+                value="author"
+                {...register("usertype")}
+              />
+              <label htmlFor="author" className="form-check-label">
+                Author
+              </label>
+            </div>
+            <div className="form-check form-check-inline">
+              <input
+                type="radio"
+                className="form-check-input"
+                id="user"
+                value="user"
+                {...register("usertype")}
+              />
+              <label htmlFor="user" className="form-check-label">
+                User
+              </label>
+            </div>
+          </div>
+          {err.length!==0 && <p className='text-danger'>{err}</p>}
+          <div className="form-group">
+            <label htmlFor='username' className="form-label">Username</label>
+            <input type="text" className="form-control" id="username" {...register("username")} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password" className="form-label">Password</label>
+            <input type="password" className="form-control" id="password" {...register("password")} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email" className='form-label'>Email</label>
+            <input type='email' className='form-control' id="email" {...register("email")} />
+          </div>
+          <button type="submit" className='btn btn-outline-primary mt-3 d-block mx-auto'>Signup</button>
+          <div className='d-flex justify-content-center mt-3' >
+          <p> AlreadyRegistered! </p> <Link to={"/signin"} >Signin</Link>
         </div>
-        <div className='form-check form-check-inline'>
-          <label htmlFor='author' className='form-check-label ' >Author</label>
-          <input id='author' type='radio' className='form-check-input' value="author" {...register("usertype", { disabled: state })} />
-        </div>
-        </div>
-        </div>
-        <label htmlFor='username' className='form-label d-flex  ' >Username</label>
-        <input type='text' id='username' {...register("username", { required: true })} className='form-control mb-4' ></input>
-        {err.length!==0 && <p className='text-danger'>{err}</p>}
-        {errors.username?.type === 'required' && <p className="text-danger">*Enter the Username</p>}
-        <label htmlFor='password' className='form-label d-flex' >Password</label>
-        <input type='password' id='password' {...register("password", { required: true})} className='form-control mb-4' ></input>
-        {errors.password?.type === 'required' && <p className="text-danger">*Enter the Password</p>}
-        {/* {errors.password?.type === 'minlength' && <p className="text-danger">*Minimum length should be 8</p>} */}
-        <label htmlFor='email' className='form-label d-flex  ' >Email</label>
-        <input type='email' id='email' {...register("email", { required: true })} className='form-control mb-4' ></input>
-        {errors.email?.type === 'required' && <p className="text-danger">*Enter the Email</p>}
-        <button type='submit' className='btn btn-success '>Register</button>
-      </form></center>
-      <div className='d-flex justify-content-center mt-5' >
-        <p> AlreadyRegistered! </p> <Link to={"/signin"} >Signin</Link>
+        </form>
       </div>
+    </div>
     </div>
   )
 }
