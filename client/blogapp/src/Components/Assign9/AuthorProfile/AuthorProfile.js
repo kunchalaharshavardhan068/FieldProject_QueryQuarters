@@ -15,10 +15,10 @@ function AuthorProfile() {
       <div className='author-profile-container' >
       <center><div >
       <div className='navbars my-2 rounded-5 '>
-        <NavLink to='/add-article' className='nav-link' ><li>Add New</li></NavLink>
+        <NavLink to='/add-article' className='nav-link ' ><li>Add New</li></NavLink>
       </div>
       <div className='navbars mb-2 rounded-5 ' >
-      <NavLink   to={`/read-article/${currentUser.username}`}  className='nav-link' ><li >Read Articles</li></NavLink>
+      <NavLink   to={`/read-article/${currentUser.username}`}  className='nav-link ' ><li >Read Articles</li></NavLink>
       </div>
       </div></center>
       <div>

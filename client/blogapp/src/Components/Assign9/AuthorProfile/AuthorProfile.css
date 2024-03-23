@@ -1,8 +1,14 @@
 
 
 .author-profile-container {
-  background-image: url("../../../Images/homebackground.jpg");
-  background-size: cover;
+  background-image: url("../../../Images/authorUserbg.jpg");
+  /* background-size: cover; */
+  /* background-image: url(images/background-photo.jpg); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  /* bac */
   height: 78vh;
   width: 100%;
     max-width: auto;
@@ -17,7 +23,7 @@
     width: 400px;
     display: flex;
     justify-content: space-between;
-    background-color: #007bff;
+    background-color: #122b54;
     color: #fff;
     padding: 10px 20px;
     border-radius: 4px;
@@ -28,7 +34,7 @@
   
   .nav-link {
     text-decoration: none;
-    color: #fff;
+    color: #fff;  
     margin: 0 10px;
   }
   
