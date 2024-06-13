@@ -8,7 +8,7 @@ let adminApp = require('./APIs/admin-api')
 const path = require('path');
 
 //deploy react build in this server
-app.use(exp.static(path.join(__dirname,'../client/blogapp/build')))
+app.use(exp.static(path.join(__dirname,'../client/inkverse/build')))
 
 app.use(exp.json())//tp parse body of req
 const mongodb = require('mongodb').MongoClient;//getting mongodb
