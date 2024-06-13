@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import {resetState} from  '../../../redux/slices/userAuthorslices'
 import inkverseLogo from '../../../Images/inkverseLogo.jpg'
 import './Header.css'
-
+import { useAuth0 } from "@auth0/auth0-react";
 function Header() {
+  const { loginWithRedirect, isAuthenticated , logout } = useAuth0();
   let {loginUserStatus, currentUser } = useSelector(state=>state.userAuthoruserAuthorLoginReducer)
   let dispatch = useDispatch();
   function signout(){

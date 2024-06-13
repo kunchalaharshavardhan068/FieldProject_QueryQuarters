@@ -15,6 +15,7 @@ authorApp.use((req,res,next)=>{
     next()
 })
 //author registration
+
 authorApp.post('/author',asyncerrorhandler(async (req,res)=>{
     let newauthor = req.body;
     const dbauthor = await authorcollection.findOne({username:newauthor.username})

@@ -52,11 +52,11 @@ async function onhandle(obj) {
 
   }
   return (
-    <div className='background ' >
+    <div className='background' >
       <div className="container d-flex justify-content-center align-items-center vh-100">
       <div className="card rounded-2  p-4 w-50 bg-body-secondary loginCard">
-        <p className='fs-3 text-primary mb-4'>SignUp</p>
-        <form onSubmit={handleSubmit(onhandle)}>
+        <p className='fs-3 text-primary '>SignUp</p>
+        <form onSubmit={handleSubmit(onhandle)} className='' >
           <div className="mb-4">
             <label htmlFor="user" className="form-check-label me-3" style={{ fontSize: "1.2rem", color: "var(--light-dark-grey)" }}>
               Register as

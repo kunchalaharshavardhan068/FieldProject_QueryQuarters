@@ -1,10 +1,54 @@
+
 .background {
     background-image: url('data:image/jpeg;base64,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');
     background-size: cover;
     background-position: center;
     /* You can add more background properties like repeat, attachment, etc. as needed */
   }
-  .abc{
-    background: linear-gradient(to right,#B4D4FF,#EEF5FF);
-    -webkit-background-clip: content-box;
+  .card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .photo {
+    margin-left: 20px;
+    flex-shrink: 0;
+    width: 200px;
+  }
+  .stimg{
+    width: fit-content;
+  }
+  .titletext{
+    font-size: xx-large;
+    font-family: "Amatic SC", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  }
+  .bodytext{
+    font-family: "Changa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  }
+  .fullcard{
+    background-color: #fff;
+    background-image: url('../../../Images/bgi2.jpg');
+    background-size: cover;
+  }
+  .spacing{
+    line-height: 2;
+  }
+  .fullcard2{
+    background-color: #fff;
+    background-image: url('../../../Images/story3.1.jpg');
+    background-size: cover;
   }

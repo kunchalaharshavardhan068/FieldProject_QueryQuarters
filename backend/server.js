@@ -26,8 +26,11 @@ mongodb.connect(process.env.DB_URL)
 .catch(err=>{console.log("Error in connecting to db",err);})
 
 //importing apis from apis
+//if path starts with user-api send request to user app
 app.use('/user-api',userApp);
+//if path starts with author-api send request to user app
 app.use('/author-api',authorApp);
+//if path starts with admin-api send request to user app
 app.use('/admin-api',adminApp);
 
 //for refreshing purpose
